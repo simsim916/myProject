@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 만들기</title>
+<style>
+    div{
+        width: 100px;
+        height: 50px;
+        background-color: rgb(0, 110, 255, 0.3);
+        color: white;
+        line-height: 50px;
+    }
+    img{
+        margin: 20px 0;
+        width: 200px;
+        height: 200px;
+        display: none;
+    }
+    div:hover{
+        background-color: rgb(0, 110, 255, 1);
+    }
+    div:hover+img{
+        display: inline-block;
+    }
+    li{
+        text-align: center;
+        list-style: none;
+    }
+
+</style>
+
+</head>
+
+<!-- 
+  < 문제 >
+
+- header 태그 내에 리스트를 구성하여 화면구현 예시와 같이 메뉴화면을 구현하라.
+- 개별 메뉴는 너비 100px, 높이 50px 로 지정.
+- 이미지의 너비와 높이는 200px 로 지정.
+- 이미지의 상/하 마진은 20로 지정.
+- 리스트의 display 설정은 불가.
+-->
+<body>
+    <ul>
+        <li><div>돈까스</div><img src="./image/pork_cutlet.png" alt=""></li>
+        <li><div>짜장면</div><img src="./image/jajangmyeon.PNG" alt=""></li>
+        <li><div>탕수육</div><img src="./image/sweet_sour_pork.png" alt=""></li>
+        <li><div>김밥</div><img src="./image/gimbap.png" alt=""></li>
+        <li><div>떡복이</div><img src="./image/tteokbokki.png" alt=""></li>
+    </ul>
+</body>
+
+</html>

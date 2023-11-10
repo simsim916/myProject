@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+<title>로아와</title>
+    <style>
+        * {
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+        }
+        header{
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+        header img{
+            height: 100%;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        figure{
+            margin: 0;
+        }
+        hr{
+            margin: 0 3%;
+            border: 0.2px solid #323232;
+        }
+        header div input{
+            resize: none;
+            font-size: 1em;
+            height: 50px;
+            width: 50vw;
+            padding-left: 20px;
+        }
+        .header_search{
+            margin-left: 20px;
+        }
+        .header_right{
+            display: flex;
+            margin-left: 10px;
+        }
+        .header_right select{
+            height: 56px;
+            width: 65px;
+        }
+        .right_login button {
+            height: 56px;
+            width: 65px;
+        }
+        nav{
+            border-top: 1px solid rgb(122, 122, 122);
+            border-bottom: 1px solid rgb(122, 122, 122);
+        }
+        .container{
+            height: 3.3em;
+            margin: 0 auto;
+            display: flex;
+        }
+        .container ul{
+            width: 90vw;
+            list-style: none;
+            padding: 0;
+            margin: auto;
+            float: left;
+            display: flex;
+        }
+        .container ul li{
+            display: block;
+            padding: 15px;
+            font-size: 1.1em;
+        }
+        .container ul li:not(:nth-child(1)){
+            border-left: 1px solid rgb(122, 122, 122);
+        }
+        aside{
+            float: left;
+            margin: 10px;
+            width: 350px;
+        }
+        .aside_donation{
+            margin: auto;
+        }
+        .aside_donation img{
+            width: 100%;
+        }
+        main{
+            margin: 10px;
+            max-width: 700px;
+            float: left;
+        }
+        main div{
+            margin: 10px 0;
+        }
+        .main_ad{
+            text-align: center;
+            margin-top: 0;
+        }
+        .main_ad1{
+            margin-top: 0;
+        }
+        .main_ad1 img{
+            border: 1px solid ;
+            width: 70%;
+        }
+        .main_ad_img{
+            width: 100%;
+        }
+        aside{
+            margin: 10px;
+            max-width: 400px;
+            text-align: center;
+            float: left;
+        }
+        .today_island{
+            border : 1px solid rgb(50 , 50, 50);
+        }
+        .today_island table{
+            margin: auto;
+            background-color: black;
+        }
+        .today_island table caption{
+            background-color: rgb(50, 50, 50);
+            font-size: 1em;
+            height: 2em;
+            margin: auto;
+            line-height: 2em;
+        }
+        .today_island table th{
+            font-size: 0.8em;
+            height: 1.5em;
+        }
+        .today_island table td{
+            font-size: 0.7em;
+            height: 1.5em;
+            text-align: center;
+        }
+        .today_col{
+            width: 30%;
+        }
+        .today_events img{
+            width: 100%;
+            margin: 0;
+        }
+        .events_container{
+            border: 1px solid rgb(50, 50, 50);
+            background-color: black;
+            margin-top: 10px;
+        }
+        .events_container>div>p:nth-of-type(3n+1) {
+            font-size: 0.8em;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .events_container>div>p:nth-of-type(3n+2) {
+            font-size: 0.8em;
+            margin: 10px 0;
+        }
+        .events_container>div>p:nth-of-type(3n+3) {
+            font-size: 0.8em;
+            margin: 10px 0;
+            font-weight: bold;
+            color: #EA5A00;
+        }
+        .events_container>div>ul{
+            margin: 5px auto 5px;
+        }
+        .events_container>div>ul>li{
+            margin-left: auto; 
+            margin-right: auto; 
+            text-align: initial;
+            font-size: 0.8em;
+            line-height: 1.7em;
+        }
+        .container_title{
+            background-color: rgb(50, 50, 50);
+            font-size: 1em;
+            line-height: 2em;
+            margin : 0 auto 5px;
+        }
+        .events_div{
+            width: 30%;
+            border: 1px solid rgb(50, 50, 50);
+            display: inline-block;
+            margin-left: 13px;
+            margin-bottom : 5px;
+            text-align: center;
+        }
+        .events_div_name{
+            font-size: 0.7em;
+            margin: 20px auto 10px;
+        }
+        .events_div img{
+            width: 40%;
+        }
+        .events_div_time{
+            font-size:0.6em;
+            color: crimson;
+            margin: 5px;
+        }
+        .events_div_type{
+            font-size: 0.5em;
+            margin-top: 5px;
+        }
+        article{
+            float: left;
+            margin: 10px;
+            width: 350px;
+        }
+        .article_openChat{
+            margin: auto;
+        }
+        .article_openChat img{
+            width: 100%;
+        }
+        .loawa_notice{
+            border: 1px solid rgb(50, 50, 50);
+            height: 100%;
+            font-size: 1em;
+            margin-top: 10px;
+            background-color: black;
+        }
+        .loawa_notice>h1{
+            text-align: center;
+            border: 1px solid rgb(50, 50, 50);
+            margin: 0;
+            line-height: 2em;
+            font-size: 1em;
+        }
+        .loawa_notice>ul{
+            margin: 10px 0 10px;
+            padding-left: 30px;
+            line-height: 2em;
+            font-size: 0.8em;
+        }
+        .loawa_notice p{
+            margin: 10px;
+            font-size: 0.8em;
+            text-align: center;
+        }
+        .loawa_notice p>a{
+            text-decoration: underline;
+        }
+        .best_search_table tr{
+            line-height: 2em;
+        }
+        .best_search_table tr>td:nth-child(1){
+            width: 200px;
+            padding-left: 25px;
+        }
+        .best_search_table tr>td:nth-child(2){
+            text-align: right;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="my project/images/logo.png" alt="logo">
+        <div class="header_search"><input type="text" placeholder="검색할 캐릭터 명을 입력하세요..."></div>
+        <div class="header_right">
+            <div class="right_language">
+                <form>
+                    <select name="language" id="">KO
+                        <option value="KO">KO</option>
+                        <option value="EN">EN</option>
+                        <option value="CN">CN</option>
+                        <option value="JP">JP</option>
+                    </select>
+                </form>
+            </div>
+            <div class="right_theme">
+                <form>
+                    <select name="theme" id="">black
+                        <option value="black">black</option>
+                        <option value="white">white</option>
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                    </select>
+                </form>
+            </div>
+            <div class="right_login">
+                <a href="#"><button>login</button></a>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="">홈</a></li>
+                <li><a href="">자격검사</a></li>
+                <li><a href="">로아샵</a></li>
+                <li><a href="">길드</a></li>
+                <li><a href="">순위</a></li>
+                <li><a href="">통계</a></li>
+                <li><a href="">도서관</a></li>
+                <li><a href="">도구</a></li>
+                <li><a href="">소개소</a></li>
+                <li><a href="">통합검색</a></li>
+                <li><i class="fa-solid fa-user fa-sm"></i></li>
+            </ul>
+        </div>
+    </nav>
+    <aside>
+        <div class="aside_donation">
+            <a href="#">
+                <img src="./my project/images/donation2(375x155).jpeg" alt="openchat_link">
+            </a>
+        </div>
+            <div class="events_container">
+                <p class="container_title">로스트아크 업데이트</p>
+                <div>
+                    <ul>
+                        <li><a href="#">10월 25일(수) 업데이트 내역</a></li>
+                        <li><a href="#">10월 18일(수) 업데이트 내역</a></li>
+                        <li><a href="#">10월 11일(수) 업데이트 내역</a></li>
+                        <li><a href="#">09월 27일(수) 업데이트 내역</a></li>
+                        <li><a href="#">09월 20일(수) 업데이트 내역</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="events_container">
+                <p class="container_title">로스트아크 쿠폰코드</p>
+                <div>
+                    <p>ECLIPSE 업데이트 기념 선물</p>
+                    <p>2023.09.13(수)~2023.12.13(수) 정기 점검 전</p>
+                    <p>2023이클립스</p>
+                    <hr>
+                    <p>카멘 The FIRST 이벤트 승리 쿠폰</p>
+                    <p>2023.10.11(수)~2024.04.10(수) 정기 점검 전</p>
+                    <p>위대한도전과승리</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <main>
+        <div class="main_ad">
+            <div class="main_ad1">
+                <img src="./my project/images/advertise(300x100).png" alt="advertise">
+            </div>
+            <div class="main_ad2">
+                <img class="main_ad_img" src="./my project/images/홍보이미지(1125x310).jpg" alt="advertise2">
+            </div>
+            <div class="main_ad3">
+                <img class="main_ad_img" src="./my project/images/홍보이미지2(1125x465).png" alt="advertise3">
+            </div>
+        </div>
+        <div class="today_events">
+            <figure class="today_island">
+                <table>
+                    <caption>오늘의 모험섬</caption>
+            
+                    <colgroup>
+                        <col class="today_col" span="3">
+                    </colgroup>
+        
+                    <tr>
+                        <th scope="col">쿵덕쿵 아일랜드</th>
+                        <th scope="col">메데이아</th>
+                        <th scope="col">몬테 섬</th>
+                    </tr>
+        
+                    <tr>
+                        <td>실링</td>
+                        <td>주화</td>
+                        <td>카드</td>
+                    </tr>
+        
+                    <tr>
+                        <td><img src="./my project/images/island_010.jpg" alt=""></td>
+                        <td><img src="./my project/images/island_04.jpg" alt=""></td>
+                        <td><img src="./my project/images/island_05.jpg" alt=""></td>
+                    </tr>
+        
+                    <tr>
+                        <td><img src="./my project/images/island_r2.jpg" alt=""></td>
+                        <td><img src="./my project/images/island_r5.jpg" alt=""></td>
+                        <td><img src="./my project/images/island_r6.jpg" alt=""></td>
+                    </tr>
+                </table>
+            </figure>
+            <div class="events_container">
+                <p class="container_title">오늘의 주요 알람</p>
+                <div class="events_div">
+                    <p class="events_div_name">카오스게이트</p>
+                    <img src="./my project/images/chaos_01.png" alt="chaos">
+                    <p class="events_div_time">10-26 12:00</p>
+                    <p class="events_div_type">대륙</p>
+                </div>
+                <div class="events_div">
+                    <p class="events_div_name">대륙협동</p>
+                    <img src="./my project/images/work.png" alt="chaos">
+                    <p class="events_div_time">10-28 12:00</p>
+                    <p class="events_div_type">대도시</p>
+                </div>
+                <div class="events_div">
+                    <p class="events_div_name">습격-점령-습격</p>
+                    <img src="./my project/images/rvr_01.png" alt="chaos">
+                    <p class="events_div_time">10-26 8:00</p>
+                    <p class="events_div_type">로웬</p>
+                </div>
+                
+                <div class="events_div">
+                    <p class="events_div_name">습격-점령-습격</p>
+                    <img src="./my project/images/rvr_01.png" alt="chaos">
+                    <p class="events_div_time">10-26 8:00</p>
+                    <p class="events_div_type">로웬</p>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <article>
+        <div class="article_openChat">
+            <a href="#">
+                <img src="./my project/images/openchat1.jpeg" alt="openchat_link">
+            </a>
+        </div>
+        <div class="loawa_notice">
+            <h1>로아와 이야기</h1>
+            <ul>
+                <li><a href="#">2023.10.10 사이트 업데이트 및 근황</a></li>
+                <li><a href="#">2023.04.27 Dear My Friends 캠페인 후기</a></li>
+                <li><a href="#">2023.02.05 사이트 업데이트 및 근황</a></li>
+            </ul>
+        </div>
+        <div class="loawa_notice">
+            <h1>로아와 공지사항</h1>
+                <p>
+                    10월 24일 07시까지 신청 된 캐릭터 도표 복구 작업이 완료되었습니다.
+                </p>
+                <hr>
+                <p>   
+                    캐릭터명 후원을 하신 도표 복구 신청자 중 복구가 되지 않으신 분은 <a href="https://open.kakao.com/o/saFQIMNf">https://open.kakao.com/o/saFQIMNf</a> 로 문의하여 주시기 바랍니다.
+                </p>
+        </div>
+        <div class="loawa_notice">
+            <h1>TOP 10 BEST SEARCH</h1>
+            <figure>
+                <table class="best_search_table">
+                    <tr>
+                        <td>필례</td>
+                        <td>1,785</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>부먹펩시파인애플피자지코</td>
+                        <td>1,320</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>우레</td>
+                        <td>1,121</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>블가루</td>
+                        <td>1,045</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>노돌리</td>
+                        <td>929</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>짹키창</td>
+                        <td>906</td>
+                    </tr>
+                    
+                </table>
+            </figure>
+        </div>
+    </article>
+</body>
+</html>

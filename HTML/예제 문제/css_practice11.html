@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+    body{
+        margin: 0;
+
+    }
+    body>div{
+        position: fixed;
+        width: 10vh;
+        height: 10vh;
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: black;
+    }
+    div>div{
+        position: absolute;
+        /* left: calc((100% - 20vh)/2);
+        top: calc((100% - 20vh)/2); */
+        width: 20vh;
+        height: 20vh;
+        color: white;
+        text-align: center;
+        line-height: 20vh;
+        overflow: hidden;
+        }
+    .blue{
+        
+        background-color: blue;
+        /* transform: translateY(-50%); */
+        left: -50%;
+        bottom: 50%;
+        z-index: 1;
+    }
+    .blue:hover{
+        z-index: 5;
+    }
+    .yellowgreen{
+        background-color: yellowgreen;
+        /* transform: translate(-45%, 30%); */
+        z-index: 2;
+        color: black;
+        right: 30%;
+    }
+    .yellowgreen:hover{
+        z-index: 5;
+    }
+    .purple{
+        background-color: purple;
+        /* transform: translate(45%, 30%); */
+        z-index: 3;
+        left: 30%;
+    }
+    .purple:hover{
+        z-index: 0;
+    }
+   </style>
+</head>
+
+<!-- 
+  < 문제 >
+
+- 화면구현 예시와 같이 겹처진 사각형 박스를 화면 중앙에 배치되도록 하고
+  개별 사각형에 마우스 오버했을 때의 동작도 포함하여 구현하라.
+  ( HTML 문서는 본인이 직접 구성 )
+
+  < 조건 >
+
+- 사각형 박스의 부모는 사각형 박스보다 작아야함.
+- 상단, 왼쪽 사각형은 호버시 맨 위로
+- 오른쪽 사각형은 호버시 맨 아래로
+
+-->
+<body>
+    <div>
+        <div class="blue">상단 사각형</div>
+        <div class="yellowgreen">왼쪽 사각형</div>
+        <div class="purple">오른쪽 사각형</div>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius eaque placeat voluptatum quaerat architecto! Placeat nam obcaecati vitae reprehenderit perspiciatis ut explicabo, fugiat velit qui similique facere. Repellat, recusandae ducimus.
+    </p>
+</body>
+
+</html>

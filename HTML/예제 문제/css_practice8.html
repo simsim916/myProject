@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시멘틱(Semantic) 섹셔닝(Sectioning)</title>
+
+    <link rel="stylesheet" href="./CSS/index.css">
+    <style>
+      body{
+        margin: 0;
+      }
+      header{
+        margin: auto;
+        width: 80%;
+        height: 20%;
+      }
+      .header_logo{
+        display: inline-block;
+        margin-left: 10px;
+        height: 100%;
+        line-height: 20vh;
+      }
+      .header_logo p{
+        display: inline-block;
+        text-indent: -9999em;
+      }
+      #logo{
+        display: inline-block;
+        width: 200px;
+        height: 150px;
+        background-image: url(./image/starbucks_logo.jpg);
+        background-color: red;
+        background-size: contain;
+        vertical-align: middle;
+      }
+      .header_menu{
+        display: inline-block;
+        width: 108px;
+        height: 38px;
+        line-height: 550px;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+      .header_menu:nth-of-type(2){
+        background-image: url(./image/CSS3_10__Box_Model_exam.JPG);
+        background-position-x:-3px;
+        background-position-y:-3px;
+        margin-left: 50px;
+      }
+      .header_menu:nth-of-type(2):hover{
+        background-position-y:-42px;
+      }
+      .header_menu:nth-of-type(3){
+        background-image: url(./image/CSS3_10__Box_Model_exam.JPG);
+        background-position-x: -112px;
+        background-position-y:-3px;
+      }
+      .header_menu:nth-of-type(3):hover{
+        background-position-y:-42px;
+      }
+      .header_menu:nth-of-type(4){
+        background-image: url(./image/CSS3_10__Box_Model_exam.JPG);
+        background-position-x: -222px;
+        background-position-y:-3px;
+        }
+        .header_menu:nth-of-type(4):hover{
+        background-position-y:-42px;
+      }
+      .header_menu:nth-of-type(5){
+        background-image: url(./image/CSS3_10__Box_Model_exam.JPG);
+        background-position-x: -332px;
+        background-position-y:-3px;
+      }
+      .header_menu:nth-of-type(5):hover{
+        background-position-y:-42px;
+      }
+      main{
+        margin: auto;
+        width: 80%;
+        height: 60%;
+      }
+      main>div {
+        display: inline-block;
+        width: 70%;
+        height: 100%;
+        vertical-align: top;
+      }
+      section{
+        display: inline-block;
+        background-color: grey;
+        width: 100%;
+        height: 60%;
+        text-align: center;
+        line-height: calc(60vh * 0.6);
+        vertical-align: middle;
+
+      }
+      article{
+        display: inline-block;
+        background-color: rgb(61, 171, 190);
+        width: 100%;
+        height: 40%;
+        text-align: center;
+        line-height: calc(60vh * 0.4);
+        vertical-align: middle;
+      }
+      aside{
+        display: inline-block;
+        background-color: rgb(200, 155, 31);
+        width: 30%;
+        height: 100%;
+        margin-left: -6px;
+        line-height: 60vh;
+        text-align: center;
+        vertical-align: middle;
+        }
+      footer{
+        margin: auto;
+        width: 80%;
+        height: 20%;
+        background-color: beige;
+        line-height: 20vh;
+        text-align: center;
+        font-weight: 700;
+        }
+    </style>
+</head>
+<!-- 
+  < 문제 >
+
+1) header, main, footer 프레임 구성.
+
+  - header, main, footer 의 너비는 1024px 을 기준으로 80% 가 되도록 하고
+    항상 화면 수평 중앙에 배치되도록 설계.
+  - 수직은 화면을 기준으로 각각 2 : 6 : 2 비율이 유지되도록 설계.
+
+
+2) header 설계.
+
+  - 로고와 메뉴는 백그라운드 이미지를 적용하고 항상 header 의 중앙에
+    배치되도록 구현.
+  - header 내에 요소들은 line-height 속성이 아닌 마진을 이용하여 수직 정렬.
+
+3) main 설계.
+
+  - section(좌상), article(좌하) 과 aside(우) 의 너비는 7 : 3 비율 적용
+  - section(좌상)과 article(좌하) 의 높이는 각각 6 : 4 비율 적용.
+ -->
+
+<body>
+    <header>
+      <div class="header_logo">
+        <p>starbucks</p>
+        <div id="logo"></div>
+        <div class="header_menu"></div>
+        <div class="header_menu"></div>
+        <div class="header_menu"></div>
+        <div class="header_menu"></div>
+
+      </div>
+    </header>
+    <main>
+        <div>
+            <section>
+                news
+            </section>
+            <article>
+                info
+            </article>
+        </div>
+      <aside>
+            login
+      </aside>
+    </main>
+    <footer>
+      contact us
+    </footer>
+</body>
+
+</html>

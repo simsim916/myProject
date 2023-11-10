@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+}
+h1{
+    text-align: left;
+}
+img{
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    display: inline-block;
+}
+div{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    line-height: 30px;
+    background-color: gainsboro;
+}
+a{
+    text-decoration: none;
+    width: 200px; 
+}
+a:not(a[href="#"]){
+    opacity: 0.5;
+
+}

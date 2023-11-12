@@ -14,11 +14,7 @@ public class mine{
             int positionX = random.nextInt(8);
             int positionY = random.nextInt(8);
             boom[positionX][positionY] = 9;
-            // if (positionX-1 >= 0) {
-            //     if (positionY-1 >= 0) {
-                    
-            //         }
-            //     }
+                
         }
         
         do {

@@ -11,10 +11,16 @@ public class mine{
             }
         }
         for (int i = 0; i < 10; i++) {
-            int positionX = random.nextInt(8);
-            int positionY = random.nextInt(8);
+            int positionX = random.nextInt(9);
+            int positionY = random.nextInt(9);
             boom[positionX][positionY] = 9;
-                
+            if (positionX-1 >= 0 && positionY-1 >= 0 && positionX+1 <= 8 && positionY+1 <= 8) {
+                for (int j = positionX-1; j <= positionX+1; j++) {
+                    for (int j2 = positionY-1; j2 <= positionY+1; j2++) {
+                        if(boom[j][j2]<9) boom[j][j2]++;
+                    }
+                }
+            }
         }
         
         do {
